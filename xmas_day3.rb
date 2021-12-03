@@ -32,7 +32,6 @@ a.each do | s |
   end
 end
 
-
 def to_decimal(binary)
   raise ArgumentError if binary.match?(/[^01]/)
 
