@@ -1,6 +1,6 @@
 require 'csv'
 
-filepath = 'data_day2.csv'
+filepath = 'raw_data/data_day2.csv'
 
 data = CSV.read(filepath)
 hash_d = {}

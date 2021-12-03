@@ -9,7 +9,7 @@
 
 require 'csv'
 
-filepath = 'data_file_day1.csv'
+filepath = 'raw_data/data_day1.csv'
 
 data = CSV.read(filepath).flatten.map { |s| s.to_i }
 
