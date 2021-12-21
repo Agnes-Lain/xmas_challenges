@@ -1,6 +1,6 @@
 require 'csv'
 # require 'daru'
-require 'matrix'
+# require 'matrix'
 require "pry-byebug"
 
 filepath = 'raw_data/data_day3.csv'
@@ -10,9 +10,7 @@ filepath = 'raw_data/data_day3.csv'
 raw_data = CSV.read(filepath)
 arr = raw_data.flatten.map {|s| s.split("")}
 def a_to_m (arr)
-  m1 = Matrix[*arr]
-  m = m1.transpose
-  m.to_a
+  arr.transpose
 end
 
 a = a_to_m(arr)
@@ -62,14 +60,15 @@ co2 = arr
 end
 
 # binding.pry
-# def selector(arr)
+# def selector(array, s_num, s_num2)
+#   arr = array
 #   arr[0].size .times do |t|
 #     if arr.size > 1
 #       c_a = a_to_m(arr)
-#       if c_a[t].count("0") <= c_a[t].count("1")
-#         arr = arr.select {|a| a[t]=="0"}
+#       if c_a[t].count(s_num) <= c_a[t].count(s_num2)
+#         arr = arr.select {|a| a[t]==s_num}
 #       else
-#         arr = arr.select {|a| a[t] == "1"}
+#         arr = arr.select {|a| a[t] == s_num2}
 #       end
 #     end
 #   end
